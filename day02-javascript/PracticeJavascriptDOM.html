@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM 조작 실습</title>
+</head>
+<body>
+    <h1 id="title">안녕하세요!</h1>
+    <button id="changeText">텍스트 변경</button>
+
+    <script>
+        // 버튼 클릭 시 텍스트 변경
+        document.getElementById("changeText").addEventListener("click", function() {
+            document.getElementById("title").innerText = "JavaScript로 변경됨!";
+        });
+    </script>
+</body>
+</html>

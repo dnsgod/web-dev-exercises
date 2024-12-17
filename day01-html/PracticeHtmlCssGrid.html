@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    border: 2px solid black;
+}
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    border: 1px solid blue;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    border: 2px solid black;
+}
+.item {
+    background-color: lightcoral;
+    padding: 20px;
+    border: 1px solid red;
+}
+</style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>    
+</body>
+</html>
+
+
