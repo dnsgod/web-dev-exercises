@@ -25,3 +25,18 @@
    - DOM 요소 선택: `document.getElementById()`, `document.querySelector()`
    - 이벤트 처리: 버튼 클릭 시 텍스트 변경
    - 동적 요소 생성: JavaScript로 새로운 HTML 요소 추가
+
+## Week 2, Day 1: JavaScript Basics
+### Completed Exercises:
+- **Event Handling:** Practiced `keyup` and `mousemove` events.
+- **Real-Time Interaction:** Updated DOM elements dynamically based on user input.
+
+#### Key Concepts:
+1. JavaScript DOM manipulation using `document.getElementById`.
+2. Event handling using `addEventListener`.
+3. Template literals (`${variable}`) for dynamic content generation.
+
+#### Files Added:
+- `week2-day1-input-event/`
+  - `index.html`: Basic structure with input and output sections.
+  - `script.js`: JavaScript logic for DOM manipulation and event handling.
