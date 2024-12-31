@@ -1,21 +1,5 @@
 # Web 연습 코드  
 
-## 📂 프로젝트 구조
-### bash
-web-dev-exercises/
-├── day01-html-basic/      # HTML 기본 구조 실습
-│   ├── index.html         # 간단한 HTML 템플릿
-│   └── style.css          # 간단한 CSS 스타일
-├── day02-html-css-revision/ # HTML/CSS 복습
-│   ├── index.html
-│   └── style.css
-├── day03-javascript-basics/ # JavaScript 기본 실습
-│   ├── index.html         # HTML 파일에 JavaScript 연결
-│   ├── script.js          # 이벤트 핸들링과 DOM 조작
-└── day04-javascript-events/ # JavaScript 이벤트 처리 실습
-    ├── index.html
-    ├── script.js
-  
 ## 📖 진행된 학습 내용
 ### Day 01 - HTML 기본
 - HTML의 기본 구조 이해
