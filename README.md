@@ -2,19 +2,19 @@
 
 ## 📂 프로젝트 구조
 ### bash
- web-dev-exercises/
- ├── day01-html-basic/      # HTML 기본 구조 실습
- │   ├── index.html         # 간단한 HTML 템플릿
- │   └── style.css          # 간단한 CSS 스타일
- ├── day02-html-css-revision/ # HTML/CSS 복습
- │   ├── index.html
- │   └── style.css
- ├── day03-javascript-basics/ # JavaScript 기본 실습
- │   ├── index.html         # HTML 파일에 JavaScript 연결
- │   ├── script.js          # 이벤트 핸들링과 DOM 조작
- └── day04-javascript-events/ # JavaScript 이벤트 처리 실습
-     ├── index.html
-     ├── script.js
+web-dev-exercises/
+├── day01-html-basic/      # HTML 기본 구조 실습
+│   ├── index.html         # 간단한 HTML 템플릿
+│   └── style.css          # 간단한 CSS 스타일
+├── day02-html-css-revision/ # HTML/CSS 복습
+│   ├── index.html
+│   └── style.css
+├── day03-javascript-basics/ # JavaScript 기본 실습
+│   ├── index.html         # HTML 파일에 JavaScript 연결
+│   ├── script.js          # 이벤트 핸들링과 DOM 조작
+└── day04-javascript-events/ # JavaScript 이벤트 처리 실습
+    ├── index.html
+    ├── script.js
   
 ## 📖 진행된 학습 내용
 ### Day 01 - HTML 기본
@@ -41,8 +41,7 @@
 - 저장소를 클론합니다.
 
 ## bash
-- git clone https://github.com/사용자명/web-dev-exercises.git
-- 브라우저에서 index.html 파일을 열어 실행합니다.
+git clone https://github.com/사용자명/web-dev-exercises.git
 
 ## 🙌 목표
 - 웹 개발 기본기 다지기
