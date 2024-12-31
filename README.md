@@ -7,5 +7,21 @@
 - Grid를 사용한 간단한 페이지 레이아웃
 
 ## Day 02: Javascript 복습
-- JavaScript 기초 개념 학습
+- JavaScript의 기본 문법 이해 및 실습
 - DOM 조작 기초 실습
+
+## Day 03: JavaScript and DOM
+
+### 학습 목표
+2. HTML과 JavaScript 연동 방법 학습
+3. DOM(Document Object Model) 조작 실습
+
+### 실습 내용
+1. **HTML과 JavaScript 연동**
+   - `<script>` 태그를 사용해 JavaScript 파일 포함
+   - HTML 요소에 이벤트 핸들러 연결 (`onclick`, `onmouseover` 등)
+
+2. **DOM 조작 실습**
+   - DOM 요소 선택: `document.getElementById()`, `document.querySelector()`
+   - 이벤트 처리: 버튼 클릭 시 텍스트 변경
+   - 동적 요소 생성: JavaScript로 새로운 HTML 요소 추가
