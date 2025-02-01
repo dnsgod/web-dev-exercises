@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App with LocalStorage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .todo-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+    button {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo App</h1>
+  <input type="text" id="todoInput" placeholder="Enter a task..." />
+  <button id="addTodo">Add Todo</button>
+  <div id="todoList"></div>
+
+  <script>
+    const todoInput = document.getElementById("todoInput");
+    const addTodoButton = document.getElementById("addTodo");
+    const todoList = document.getElementById("todoList");
+
+    const getTodosFromStorage = () => {
+      const todos = localStorage.getItem("todos");
+      return todos ? JSON.parse(todos) : [];
+    };
+
+    const saveTodosToStorage = (todos) => {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    };
+
+    let todos = getTodosFromStorage();
+
+    const renderTodos = () => {
+      todoList.innerHTML = "";
+      todos.forEach((todo, index) => {
+        const todoItem = document.createElement("div");
+        todoItem.className = "todo-item";
+        if (todo.completed) todoItem.classList.add("completed");
+
+        todoItem.innerHTML = `
+          <span>${todo.text}</span>
+          <div>
+            <button data-index="${index}" class="toggle-status">Toggle</button>
+            <button data-index="${index}" class="delete-todo">Delete</button>
+          </div>
+        `;
+
+        todoList.appendChild(todoItem);
+      });
+    };
+
+    const addTodo = () => {
+      const text = todoInput.value.trim();
+      if (text) {
+        todos.push({ text, completed: false });
+        saveTodosToStorage(todos);
+        renderTodos();
+        todoInput.value = "";
+      }
+    };
+
+    const toggleTodoStatus = (index) => {
+      todos[index].completed = !todos[index].completed;
+      saveTodosToStorage(todos);
+      renderTodos();
+    };
+
+    const deleteTodo = (index) => {
+      todos.splice(index, 1);
+      saveTodosToStorage(todos);
+      renderTodos();
+    };
+
+    todoList.addEventListener("click", (event) => {
+      const target = event.target;
+      const index = target.dataset.index;
+
+      if (target.classList.contains("toggle-status")) {
+        toggleTodoStatus(index);
+      } else if (target.classList.contains("delete-todo")) {
+        deleteTodo(index);
+      }
+    });
+
+    addTodoButton.addEventListener("click", addTodo);
+
+    renderTodos();
+  </script>
+</body>
+</html>
